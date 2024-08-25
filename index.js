@@ -9,6 +9,9 @@ const port = 3000;
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
+//master key to delete all teams
+const masterKey = '93HGF-FDJ49-DSGDS-89W4E'
+
 let teams = [
       {
         id: 1,
@@ -26,8 +29,8 @@ let teams = [
         number_of_stanley_cups: 1,
         ahl_affiliate: "San Diego Gulls",
         all_time_points_leader: {
-          player: "Teemu Selanne",
-          points: 988
+          player: "Ryan Getzlaf",
+          points: 1019
         }
       },
       {
@@ -61,7 +64,7 @@ let teams = [
         arena: "KeyBank Center",
         coach: "Lindy Ruff",
         gm: "Kevyn Adams",
-        owner: "Terry Pegula",
+        owner: "Terry & Kim Pegula",
         captain: "Vacant",
         stanley_cups: 0,
         affiliate: "Rochester Americans",
@@ -361,7 +364,7 @@ let teams = [
         arena: "UBS Arena",
         coach: "Patrick Roy",
         gm: "Lou Lamoriello",
-        owner: "Scott Malkin",
+        owner: "Scott D. Malkin",
         captain: "Anders Lee",
         stanley_cups: 4,
         affiliate: "Bridgeport Islanders",
@@ -521,7 +524,7 @@ let teams = [
         coach: "Jon Cooper",
         gm: "Julien BriseBois",
         owner: "Jeffrey Vinik",
-        captain: "Steven Stamkos",
+        captain: "Vacant",
         stanley_cups: 3,
         affiliate: "Syracuse Crunch",
         points_leader: {
@@ -651,22 +654,242 @@ let teams = [
       }
     ];
   
-// Simple route
-app.get('/', (req, res) => {
-    console.log('Hello world!');
-    res.send('Hello world!');
-});
-
 //get all teams
 app.get('/teams', (req, res) => {
     res.json(teams);
 });
+
+//get a random team
+app.get("/random", (req, res) => {
+    const randomIndex = Math.floor(Math.random() * teams.length);
+    res.json(teams[randomIndex]);
+  });
 
 //get a team by specific ID
 app.get('/teams/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const findTeam = teams.find((team) => team.id === id);
     res.json(findTeam);
+});
+
+//get a team by it's conference
+app.get('/teams/conference/:conference', (req, res) => {
+    const conference = req.params.conference;
+
+    if (!conference) {
+        return res.status(400).json({ error: "Valid conference query parameter is required" });
+    }
+
+    const filteredTeams = teams.filter((team) => team.conference.toLowerCase() === conference.toLowerCase());
+
+    if (filteredTeams.length === 0) {
+        return res.status(404).json({ error: `No teams found in the ${conference} conference.` });
+    } else {
+        res.json(filteredTeams);
+    }
+});
+
+//get a team by it's division
+app.get('/teams/division/:division', (req, res) => {
+
+    if (!division) {
+        return res.status(400).json({ error: "Valid conference query parameter is required" });
+    }
+
+    const division = req.query.division;
+    const filteredTeams = teams.filter((team) => team.division.toLowerCase() === division);
+    
+    if (filteredTeams.length === 0){
+        return res.status(404).json({ error: `No teams found in the ${division} division.` });
+    } else {
+        res.json(filteredTeams);
+    }
+    
+});
+
+//get a team by it's abbreviation
+app.get('/teams', (req, res) => {
+
+    if (!abbreviation) {
+        return res.status(400).json({ error: "Valid abbreviation query parameter is required" });
+    }
+
+    const abbreviation = req.query.abbreviation;
+    const filteredTeams = teams.filter((team) => team.abbreviation.toLowerCase() === abbreviation);
+    
+    if (filteredTeams.length === 0){
+        return res.status(404).json({ error: `No teams found in with the abbreviation ${abbreviation}.` });
+    } else {
+        res.json(filteredTeams);
+    }
+    
+});
+
+//get a team by the year it was founded
+app.get('/teams', (req, res) => {
+
+    const founded = req.query.founded;
+    const filteredTeams = teams.filter((team) => team.founded === founded);
+    
+    if (filteredTeams.length === 0){
+        return res.status(404).json({ error: `No teams found which were founded in ${founded}.` });
+    } else {
+        res.json(filteredTeams);
+    }
+    
+});
+
+//get a team by the arena they play in
+app.get('/teams', (req, res) => {
+
+    if (!arena) {
+        return res.status(400).json({ error: "Valid arena query parameter is required" });
+    }
+
+    const arena = req.query.arena;
+    const filteredTeams = teams.filter((team) => team.arena.toLowerCase() === arena);
+    
+    if (filteredTeams.length === 0){
+        return res.status(404).json({ error: `No teams found which play in ${arena}.` });
+    } else {
+        res.json(filteredTeams);
+    }
+    
+});
+
+//get a team by the coach's name
+app.get('/teams', (req, res) => {
+
+    if (!coach) {
+        return res.status(400).json({ error: "Valid coach query parameter is required" });
+    }
+
+    const coach = req.query.coach;
+    const filteredTeams = teams.filter((team) => team.coach.toLowerCase() === coach);
+    
+    if (filteredTeams.length === 0){
+        return res.status(404).json({ error: `No teams has a coach named ${coach}.` });
+    } else {
+        res.json(filteredTeams);
+    }
+    
+});
+
+//get a team by the general manager's name
+app.get('/teams', (req, res) => {
+
+    if (!gm) {
+        return res.status(400).json({ error: "Valid GM query parameter is required" });
+    }
+
+    const gm = req.query.gm;
+    const filteredTeams = teams.filter((team) => team.gm.toLowerCase() === gm);
+    
+    if (filteredTeams.length === 0){
+        return res.status(404).json({ error: `No teams has a general manager named ${gm}.` });
+    } else {
+        res.json(filteredTeams);
+    }
+    
+});
+
+//get a team by the owner
+app.get('/teams', (req, res) => {
+
+    if (!owner) {
+        return res.status(400).json({ error: "Valid owner query parameter is required" });
+    }
+
+    const owner = req.query.owner;
+    const filteredTeams = teams.filter((team) => team.owner.toLowerCase() === owner);
+    
+    if (filteredTeams.length === 0){
+        return res.status(404).json({ error: `No teams has ${owner} as their owner.` });
+    } else {
+        res.json(filteredTeams);
+    }
+    
+});
+
+//get a team by their captain
+app.get('/teams', (req, res) => {
+
+    if (!captain) {
+        return res.status(400).json({ error: "Valid captain query parameter is required" });
+    }
+
+    const captain = req.query.captain;
+    const filteredTeams = teams.filter((team) => team.captain.toLowerCase() === captain);
+    
+    if (filteredTeams.length === 0){
+        return res.status(404).json({ error: `No teams has ${captain} as their captain.` });
+    } else {
+        res.json(filteredTeams);
+    }
+    
+});
+
+//add a new team to the end of the list
+app.post('/teams', (req, res) => {
+    const addTeam = {
+        id: id,
+        name: req.body.name || existingTeam.name,
+        abbreviation: req.body.abbreviation || existingTeam.abbreviation,
+        location: req.body.location || existingTeam.location,
+        conference: req.body.conference || existingTeam.conference,
+        division: req.body.division || existingTeam.division,
+        founded: req.body.founded || existingTeam.founded,
+        arena: req.body.arena || existingTeam.arena,
+        coach: req.body.coach || existingTeam.coach,
+        gm: req.body.gm || existingTeam.gm,
+        owner: req.body.owner || existingTeam.owner,
+        captain: req.body.captain || existingTeam.captain,
+        stanley_cups: req.body.stanley_cups || existingTeam.stanley_cups,
+        affiliate: req.body.affiliate || existingTeam.affiliate,
+        points_leader: {
+            player: (req.body.points_leader && req.body.points_leader.player) || existingTeam.points_leader.player,
+            points: (req.body.points_leader && req.body.points_leader.points) || existingTeam.points_leader.points
+        }
+    };
+
+    teams.push(addTeam);
+    res.json(replacementTeam);
+});
+
+
+//update all attributes of a team
+app.put('teams/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    const existingPost = teams.find((team) => team.id === id);
+    if (!existingPost){
+        return res.status(404).json({error: `No team with ID ${id} found. No team information was updated`}) 
+    } else {
+        const replacementTeam = {
+            id: id,
+            name: req.body.name,
+            abbreviation: req.body.abbreviation,
+            location: req.body.location,
+            conference: req.body.conference,
+            division: req.body.division,
+            founded: req.body.founded,
+            arena: req.body.arena,
+            coach: req.body.coach,
+            gm: req.body.gm,
+            owner: req.body.owner,
+            captain: req.body.captain,
+            stanley_cups: req.body.stanley_cups,
+            affiliate: req.body.affiliate,
+            points_leader: {
+              player: req.body.points_leader.name,
+              points: req.body.points_leader.points
+            }
+        };
+        
+        const searchIndex = teams.findIndex((team) = team.id === id);
+        teams[searchIndex] = replacementTeam;
+        res.json(replacementTeam)
+    }
+
 });
 
 //update one or more attributes of a team
@@ -692,16 +915,40 @@ app.patch('/teams/:id', (req, res) => {
             stanley_cups: req.body.stanley_cups || existingTeam.stanley_cups,
             affiliate: req.body.affiliate || existingTeam.affiliate,
             points_leader: {
-              player: req.body.points_leader.name,
-              points: req.body.points_leader.points
+                player: (req.body.points_leader && req.body.points_leader.player) || existingTeam.points_leader.player,
+                points: (req.body.points_leader && req.body.points_leader.points) || existingTeam.points_leader.points
             }
-        }
+        };
     
         const searchIndex = teams.findIndex((team) => teams.id === id);
         teams[searchIndex] = replacementTeam;
         res.json(replacementTeam);
     }
     
+});
+
+//delete a team based on it's ID
+app.delete('teams/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    const searchIndex = teams.findIndex((team) => team.id === id);
+    if (!existingPost){
+        return res.status(404).json({error: `No team with ID ${id} found. No team was deleted`}) 
+    } else {
+        teams.splice(searchIndex, 1);
+        res.sendStatus(200);
+        res.json(teams);
+    }
+});
+
+//delete all teams if the user inputs the correct master key
+app.delete('/delete-all', (req, res) => {
+    const userKey = req.query.key;
+    if (userKey === masterKey){
+        teams = [];
+        res.sendStatus(200);
+    } else {
+        return res.status(404).json({error: `Incorrect master key. No teams were deleted`}) 
+    }
 });
 
 // Start server
