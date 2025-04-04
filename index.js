@@ -42,10 +42,10 @@ let teams = [
         "division": "Atlantic",
         "founded": 1924,
         "arena": "TD Garden",
-        "coach": "Jim Montgomery",
+        "coach": "Joe Sacco",
         "gm": "Don Sweeney",
         "owner": "Jeremy Jacobs",
-        "captain": "Brad Marchand",
+        "captain": "Vacant",
         "stanley_cups": 6,
         "affiliate": "Providence Bruins",
         "points_leader": {
@@ -65,7 +65,7 @@ let teams = [
         "coach": "Lindy Ruff",
         "gm": "Kevyn Adams",
         "owner": "Terry & Kim Pegula",
-        "captain": "Vacant",
+        "captain": "Rasmus Dahlin",
         "stanley_cups": 0,
         "affiliate": "Rochester Americans",
         "points_leader": {
@@ -122,7 +122,7 @@ let teams = [
         "division": "Central",
         "founded": 1926,
         "arena": "United Center",
-        "coach": "Luke Richardson",
+        "coach": "Anders Sörensen",
         "gm": "Kyle Davidson",
         "owner": "Wirtz Corporation",
         "captain": "Vacant",
@@ -202,7 +202,7 @@ let teams = [
         "division": "Atlantic",
         "founded": 1926,
         "arena": "Little Caesars Arena",
-        "coach": "Derek Lalonde",
+        "coach": "Todd McLellan",
         "gm": "Steve Yzerman",
         "owner": "Ilitch Holdings",
         "captain": "Dylan Larkin",
@@ -222,8 +222,8 @@ let teams = [
         "division": "Pacific",
         "founded": 1972,
         "arena": "Rogers Place",
-        "coach": "Jay Woodcroft",
-        "gm": "Ken Holland",
+        "coach": "Kris Knoblauch",
+        "gm": "Stan Bowman",
         "owner": "Daryl Katz",
         "captain": "Connor McDavid",
         "stanley_cups": 5,
@@ -330,7 +330,7 @@ let teams = [
         "affiliate": "Milwaukee Admirals",
         "points_leader": {
           "player": "Roman Josi",
-          "points": 686
+          "points": 724
         }
       },
       {
@@ -385,7 +385,7 @@ let teams = [
         "coach": "Peter Laviolette",
         "gm": "Chris Drury",
         "owner": "James Dolan",
-        "captain": "Jacob Trouba",
+        "captain": "Vacant",
         "stanley_cups": 4,
         "affiliate": "Hartford Wolf Pack",
         "points_leader": {
@@ -421,7 +421,7 @@ let teams = [
         "division": "Metropolitan",
         "founded": 1967,
         "arena": "Wells Fargo Center",
-        "coach": "John Tortorella",
+        "coach": "Brad Shaw",
         "gm": "Daniel Briere",
         "owner": "Comcast Spectacor",
         "captain": "Sean Couturier",
@@ -484,12 +484,12 @@ let teams = [
         "coach": "Dave Hakstol",
         "gm": "Ron Francis",
         "owner": "Seattle Hockey Partners",
-        "captain": "Vacant",
+        "captain": "Jordan Eberle",
         "stanley_cups": 0,
         "affiliate": "Coachella Valley Firebirds",
         "points_leader": {
           "player": "Jared McCann",
-          "points": 182
+          "points": 237
         }
       },
       {
@@ -501,7 +501,7 @@ let teams = [
         "division": "Central",
         "founded": 1967,
         "arena": "Enterprise Center",
-        "coach": "Drew Bannister",
+        "coach": "Jim Montgomery",
         "gm": "Doug Armstrong",
         "owner": "Tom Stillman",
         "captain": "Brayden Schenn",
@@ -524,7 +524,7 @@ let teams = [
         "coach": "Jon Cooper",
         "gm": "Julien BriseBois",
         "owner": "Jeffrey Vinik",
-        "captain": "Vacant",
+        "captain": "Victor Hedman",
         "stanley_cups": 3,
         "affiliate": "Syracuse Crunch",
         "points_leader": {
@@ -564,12 +564,12 @@ let teams = [
         "coach": "André Tourigny",
         "gm": "Bill Armstrong",
         "owner": "Ryan Smith",
-        "captain": "Vacant",
+        "captain": "Clayton Keller",
         "stanley_cups": 0,
         "affiliate": "Tucson Roadrunners",
         "points_leader": {
           "player": "Clayton Keller",
-          "points": 0
+          "points": 80
         }
       },
       {
@@ -629,7 +629,7 @@ let teams = [
         "affiliate": "Hershey Bears",
         "points_leader": {
           "player": "Alex Ovechkin",
-          "points": 1550
+          "points": 1616
         }
       },
       {
@@ -648,8 +648,8 @@ let teams = [
         "stanley_cups": 0,
         "affiliate": "Manitoba Moose",
         "points_leader": {
-          "player": "Blake Wheeler",
-          "points": 812
+          "player": "Mark Scheifele",
+          "points": 799
         }
       }
     ];
