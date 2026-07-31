@@ -22,10 +22,10 @@ let teams = [
         "division": "Pacific",
         "founded": 1993,
         "arena": "Honda Center",
-        "coach": "Greg Cronin",
+        "coach": "Joel Quenneville",
         "gm": "Pat Verbeek",
         "owner": "Henry Samueli",
-        "captain": "Vacant",
+        "captain": "Radko Gudas",
         "stanley_cups": 1,
         "affiliate": "San Diego Gulls",
         "points_leader": {
@@ -63,7 +63,7 @@ let teams = [
         "founded": 1970,
         "arena": "KeyBank Center",
         "coach": "Lindy Ruff",
-        "gm": "Kevyn Adams",
+        "gm": "Jarmo Kekäläinen",
         "owner": "Terry & Kim Pegula",
         "captain": "Rasmus Dahlin",
         "stanley_cups": 0,
@@ -106,7 +106,7 @@ let teams = [
         "gm": "Eric Tulsky",
         "owner": "Tom Dundon",
         "captain": "Jordan Staal",
-        "stanley_cups": 1,
+        "stanley_cups": 2,
         "affiliate": "Chicago Wolves",
         "points_leader": {
           "player": "Ron Francis",
@@ -162,10 +162,10 @@ let teams = [
         "division": "Metropolitan",
         "founded": 2000,
         "arena": "Nationwide Arena",
-        "coach": "Dean Evason",
+        "coach": "Rick Bowness",
         "gm": "Don Waddell",
         "owner": "John P. McConnell",
-        "captain": "Boone Jenner",
+        "captain": "Vacant",
         "stanley_cups": 0,
         "affiliate": "Cleveland Monsters",
         "points_leader": {
@@ -182,7 +182,7 @@ let teams = [
         "division": "Central",
         "founded": 1967,
         "arena": "American Airlines Center",
-        "coach": "Peter DeBoer",
+        "coach": "⁠Glen Gulutzan",
         "gm": "Jim Nill",
         "owner": "Tom Gaglardi",
         "captain": "Jamie Benn",
@@ -203,7 +203,7 @@ let teams = [
         "founded": 1926,
         "arena": "Little Caesars Arena",
         "coach": "Todd McLellan",
-        "gm": "Steve Yzerman",
+        "gm": "Vacant",
         "owner": "Ilitch Holdings",
         "captain": "Dylan Larkin",
         "stanley_cups": 11,
@@ -222,7 +222,7 @@ let teams = [
         "division": "Pacific",
         "founded": 1972,
         "arena": "Rogers Place",
-        "coach": "Kris Knoblauch",
+        "coach": "Mike Babcock",
         "gm": "Stan Bowman",
         "owner": "Daryl Katz",
         "captain": "Connor McDavid",
@@ -241,16 +241,16 @@ let teams = [
         "conference": "Eastern",
         "division": "Atlantic",
         "founded": 1993,
-        "arena": "FLA Live Arena",
+        "arena": "Amerant Bank Arena",
         "coach": "Paul Maurice",
         "gm": "Bill Zito",
         "owner": "Vincent Viola",
         "captain": "Aleksander Barkov",
-        "stanley_cups": 1,
+        "stanley_cups": 2,
         "affiliate": "Charlotte Checkers",
         "points_leader": {
           "player": "Aleksander Barkov",
-          "points": 711
+          "points": 782
         }
       },
       {
@@ -262,15 +262,15 @@ let teams = [
         "division": "Pacific",
         "founded": 1967,
         "arena": "Crypto.com Arena",
-        "coach": "Jim Hiller",
-        "gm": "Rob Blake",
+        "coach": "Peter Laviolette",
+        "gm": "Ken Holland",
         "owner": "Philip Anschutz",
         "captain": "Anže Kopitar",
         "stanley_cups": 2,
         "affiliate": "Ontario Reign",
         "points_leader": {
-          "player": "Marcel Dionne",
-          "points": 1307
+          "player": "Anze Kopitar",
+          "points": 1316
         }
       },
       {
@@ -281,7 +281,7 @@ let teams = [
         "conference": "Western",
         "division": "Central",
         "founded": 2000,
-        "arena": "Xcel Energy Center",
+        "arena": "Grand Casino Arena",
         "coach": "John Hynes",
         "gm": "Bill Guerin",
         "owner": "Craig Leipold",
@@ -330,7 +330,7 @@ let teams = [
         "affiliate": "Milwaukee Admirals",
         "points_leader": {
           "player": "Roman Josi",
-          "points": 724
+          "points": 779
         }
       },
       {
@@ -362,12 +362,12 @@ let teams = [
         "division": "Metropolitan",
         "founded": 1972,
         "arena": "UBS Arena",
-        "coach": "Patrick Roy",
-        "gm": "Lou Lamoriello",
+        "coach": "Peter DeBoer",
+        "gm": "Mathieu Darche",
         "owner": "Scott D. Malkin",
-        "captain": "Anders Lee",
+        "captain": "Vacant",
         "stanley_cups": 4,
-        "affiliate": "Bridgeport Islanders",
+        "affiliate": "Hamilton Hammers",
         "points_leader": {
           "player": "Bryan Trottier",
           "points": 1353
@@ -382,10 +382,10 @@ let teams = [
         "division": "Metropolitan",
         "founded": 1926,
         "arena": "Madison Square Garden",
-        "coach": "Peter Laviolette",
+        "coach": "Mike Sullivan",
         "gm": "Chris Drury",
         "owner": "James Dolan",
-        "captain": "Vacant",
+        "captain": "J.T. Miller",
         "stanley_cups": 4,
         "affiliate": "Hartford Wolf Pack",
         "points_leader": {
@@ -405,7 +405,7 @@ let teams = [
         "coach": "Travis Green",
         "gm": "Steve Staios",
         "owner": "Michael Andlauer",
-        "captain": "Brady Tkachuk",
+        "captain": "Vacant",
         "stanley_cups": 0,
         "affiliate": "Belleville Senators",
         "points_leader": {
@@ -421,7 +421,7 @@ let teams = [
         "division": "Metropolitan",
         "founded": 1967,
         "arena": "Wells Fargo Center",
-        "coach": "Brad Shaw",
+        "coach": "Rick Tocchet",
         "gm": "Daniel Briere",
         "owner": "Comcast Spectacor",
         "captain": "Sean Couturier",
@@ -441,15 +441,15 @@ let teams = [
         "division": "Metropolitan",
         "founded": 1967,
         "arena": "PPG Paints Arena",
-        "coach": "Mike Sullivan",
+        "coach": "Dan Muse",
         "gm": "Kyle Dubas",
-        "owner": "Fenway Sports Group",
+        "owner": "Hoffmann Family",
         "captain": "Sidney Crosby",
         "stanley_cups": 5,
         "affiliate": "Wilkes-Barre/Scranton Penguins",
         "points_leader": {
-          "player": "Mario Lemieux",
-          "points": 1723
+          "player": "Sidney Crosby",
+          "points": 1761
         }
       },
       {
@@ -464,7 +464,7 @@ let teams = [
         "coach": "Ryan Warsofsky",
         "gm": "Mike Grier",
         "owner": "San Jose Sports & Entertainment Enterprises",
-        "captain": "Logan Couture",
+        "captain": "Vacant",
         "stanley_cups": 0,
         "affiliate": "San Jose Barracuda",
         "points_leader": {
@@ -481,15 +481,15 @@ let teams = [
         "division": "Pacific",
         "founded": 2021,
         "arena": "Climate Pledge Arena",
-        "coach": "Dave Hakstol",
-        "gm": "Ron Francis",
+        "coach": "Lane Lambert",
+        "gm": "Jason Botterill",
         "owner": "Seattle Hockey Partners",
         "captain": "Jordan Eberle",
         "stanley_cups": 0,
         "affiliate": "Coachella Valley Firebirds",
         "points_leader": {
           "player": "Jared McCann",
-          "points": 237
+          "points": 283
         }
       },
       {
@@ -502,9 +502,9 @@ let teams = [
         "founded": 1967,
         "arena": "Enterprise Center",
         "coach": "Jim Montgomery",
-        "gm": "Doug Armstrong",
+        "gm": "Alexander Steen",
         "owner": "Tom Stillman",
-        "captain": "Brayden Schenn",
+        "captain": "Vacant",
         "stanley_cups": 1,
         "affiliate": "Springfield Thunderbirds",
         "points_leader": {
@@ -520,7 +520,7 @@ let teams = [
         "conference": "Eastern",
         "division": "Atlantic",
         "founded": 1992,
-        "arena": "Amalie Arena",
+        "arena": "Benchmark International Arena",
         "coach": "Jon Cooper",
         "gm": "Julien BriseBois",
         "owner": "Jeffrey Vinik",
@@ -541,8 +541,8 @@ let teams = [
         "division": "Atlantic",
         "founded": 1917,
         "arena": "Scotiabank Arena",
-        "coach": "Craig Berube",
-        "gm": "Brad Treliving",
+        "coach": "Jim Hiller",
+        "gm": "John Chayka",
         "owner": "Maple Leaf Sports & Entertainment",
         "captain": "Auston Matthews",
         "stanley_cups": 13,
@@ -569,7 +569,7 @@ let teams = [
         "affiliate": "Tucson Roadrunners",
         "points_leader": {
           "player": "Clayton Keller",
-          "points": 80
+          "points": 178
         }
       },
       {
@@ -581,10 +581,10 @@ let teams = [
         "division": "Pacific",
         "founded": 1970,
         "arena": "Rogers Arena",
-        "coach": "Rick Tocchet",
-        "gm": "Patrik Allvin",
+        "coach": "Manny Malhotra",
+        "gm": "Ryan Johnson",
         "owner": "Francesco Aquilini",
-        "captain": "Quinn Hughes",
+        "captain": "Vacant",
         "stanley_cups": 0,
         "affiliate": "Abbotsford Canucks",
         "points_leader": {
@@ -601,7 +601,7 @@ let teams = [
         "division": "Pacific",
         "founded": 2017,
         "arena": "T-Mobile Arena",
-        "coach": "Bruce Cassidy",
+        "coach": "Ryan Craig",
         "gm": "Kelly McCrimmon",
         "owner": "Bill Foley",
         "captain": "Mark Stone",
@@ -629,7 +629,7 @@ let teams = [
         "affiliate": "Hershey Bears",
         "points_leader": {
           "player": "Alex Ovechkin",
-          "points": 1616
+          "points": 1687
         }
       },
       {
@@ -641,7 +641,7 @@ let teams = [
         "division": "Central",
         "founded": 1999,
         "arena": "Canada Life Centre",
-        "coach": "Scott Arniel",
+        "coach": "Joseph Jackson",
         "gm": "Kevin Cheveldayoff",
         "owner": "True North Sports & Entertainment",
         "captain": "Adam Lowry",
@@ -649,7 +649,7 @@ let teams = [
         "affiliate": "Manitoba Moose",
         "points_leader": {
           "player": "Mark Scheifele",
-          "points": 799
+          "points": 907
         }
       }
     ];
